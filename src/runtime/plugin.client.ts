@@ -1,5 +1,5 @@
 import dayjs from 'dayjs'
-import { defineNuxtPlugin } from '#app'
+import { defineNuxtPlugin, useRuntimeConfig } from '#app'
 
 export default defineNuxtPlugin(async () => {
   const { dayjs: { locales, plugins } } = useRuntimeConfig().public

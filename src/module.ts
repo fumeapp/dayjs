@@ -5,7 +5,6 @@ import { defu } from 'defu'
 export interface ModuleOptions {
   /**
    * An array of optional locales to load
-   * @default []
    * @example ['en', 'fr']
    */
 
@@ -13,7 +12,6 @@ export interface ModuleOptions {
 
   /**
    * An array of optional plugins to load
-   * @default ['relativeTime', 'utc']
    * @example ['relativeTime', 'utc']
    */
 
@@ -45,7 +43,7 @@ export default defineNuxtModule<ModuleOptions>({
     const resolver = createResolver(import.meta.url)
 
     addPlugin(resolver.resolve('./runtime/plugin.client'))
-    addImportsDir(resolver.resolve('runtime/composables'))
+    addImportsDir(resolver.resolve('./runtime/composables'))
 
   }
 })

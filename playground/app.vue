@@ -1,5 +1,6 @@
 <script lang="ts" setup>
-const dayjs = useDayjs()
+import { useNuxtApp } from '#app'
+const { $dayjs: dayjs } = useNuxtApp()
 </script>
 
 <template>
@@ -7,8 +8,8 @@ const dayjs = useDayjs()
     <table>
       <tr>
         <th>Name</th>
-        <th>code</th>
-        <th>result></th>
+        <th>Code</th>
+        <th>Result</th>
       </tr>
       <tr>
         <td>Current time</td>
