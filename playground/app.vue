@@ -1,5 +1,7 @@
+
 <script lang="ts" setup>
-const dayjs = useDayjs()
+import { useNuxtApp } from '#app'
+const { $dayjs: dayjs } = useNuxtApp()
 </script>
 
 <template>

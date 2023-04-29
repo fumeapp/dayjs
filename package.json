@@ -1,8 +1,8 @@
 {
-  "name": "my-module",
+  "name": "dayjs-nuxt",
   "version": "1.0.0",
-  "description": "My new Nuxt module",
-  "repository": "your-org/my-module",
+  "description": "DayJS Nuxt Module",
+  "repository": "fumeapp.org/dayjs",
   "license": "MIT",
   "type": "module",
   "exports": {

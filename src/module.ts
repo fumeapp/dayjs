@@ -1,4 +1,4 @@
-import { defineNuxtModule, addPlugin, addImportsDir, createResolver } from '@nuxt/kit'
+import { defineNuxtModule, addPlugin, addImportsDir, createResolver, addImports } from '@nuxt/kit'
 import { defu } from 'defu'
 
 // Module options TypeScript interface definition
@@ -36,16 +36,17 @@ export default defineNuxtModule<ModuleOptions>({
   },
   setup (options, nuxt) {
 
-    console.log("in module.ts", options)
-
     nuxt.options.runtimeConfig.public.dayjs = defu(nuxt.options.runtimeConfig.dayjs, {
       locales: options.locales,
       plugins: options.plugins,
     })
     const resolver = createResolver(import.meta.url)
 
-    addPlugin(resolver.resolve('./runtime/plugin.client'))
-    addImportsDir(resolver.resolve('runtime/composables'))
-
+    addPlugin(resolver.resolve('runtime/plugin.client'))
+    addImports({
+      name: 'useDayjs',
+      as: 'useDayjs',
+      from: resolver.resolve('runtime/composables/dayjs')
+    })
   }
 })
