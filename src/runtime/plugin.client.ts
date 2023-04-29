@@ -1,7 +1,6 @@
 import dayjs from 'dayjs'
 import { defineNuxtPlugin, useRuntimeConfig } from '#app'
 
-
 export default defineNuxtPlugin(async () => {
   const { locales, plugins } = useRuntimeConfig().public.dayjs
   for (const locale of locales) {
@@ -17,6 +16,7 @@ export default defineNuxtPlugin(async () => {
   }
 })
 
+// https://api.github.com/repos/iamkun/dayjs/contents/src/locale
 const importLocale = async (locale: string) => {
   let result
   switch (locale) {

@@ -9,8 +9,8 @@ const { $dayjs: dayjs } = useNuxtApp()
     <table>
       <tr>
         <th>Name</th>
-        <th>code</th>
-        <th>result></th>
+        <th>Code</th>
+        <th>Result</th>
       </tr>
       <tr>
         <td>Current time</td>
