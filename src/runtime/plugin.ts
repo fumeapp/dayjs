@@ -1,4 +1,4 @@
-import dayjs from 'dayjs'
+import * as dayjs from 'dayjs'
 import { defineNuxtPlugin, useRuntimeConfig } from '#app'
 
 export default defineNuxtPlugin(async (nuxtApp) => {
