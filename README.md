@@ -1,4 +1,5 @@
 # Dayjs Nuxt Module
+> EARLY DEVELOPMENT, NOT READY FOR USE
 
 [![npm version][npm-version-src]][npm-version-href]
 [![npm downloads][npm-downloads-src]][npm-downloads-href]

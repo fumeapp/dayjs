@@ -1,4 +1,3 @@
-
 <script lang="ts" setup>
 import { useNuxtApp } from '#app'
 const { $dayjs: dayjs } = useNuxtApp()

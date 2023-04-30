@@ -43,6 +43,5 @@ export default defineNuxtModule<ModuleOptions>({
       as: 'useDayjs',
       from: resolver.resolve('runtime/composables/dayjs')
     })
-    addPlugin(resolver.resolve('./runtime/plugin.client'))
   }
 })
