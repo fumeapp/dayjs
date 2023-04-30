@@ -1,7 +1,7 @@
 import dayjs from 'dayjs'
 import { defineNuxtPlugin, useRuntimeConfig } from '#app'
 
-export default defineNuxtPlugin(async () => {
+export default defineNuxtPlugin(async (nuxtApp) => {
   const { locales, plugins } = useRuntimeConfig().public.dayjs
   for (const locale of locales) {
     await importLocale(locale)
@@ -9,11 +9,7 @@ export default defineNuxtPlugin(async () => {
   for (const plugin of plugins) {
     await importPlugin(plugin)
   }
-  return {
-    provide: {
-      dayjs
-    }
-  }
+ nuxtApp.provide('dayjs', dayjs)
 })
 
 // https://api.github.com/repos/iamkun/dayjs/contents/src/locale
@@ -46,4 +42,3 @@ const importPlugin = async (plugin: string) => {
   }
   dayjs.extend(result.default)
 }
-

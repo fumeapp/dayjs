@@ -34,14 +34,14 @@ export default defineNuxtModule<ModuleOptions>({
   },
   setup (options, nuxt) {
 
-    nuxt.options.runtimeConfig.public.dayjs = defu(nuxt.options.runtimeConfig.dayjs, options)
     const resolver = createResolver(import.meta.url)
+    nuxt.options.runtimeConfig.public.dayjs = defu(nuxt.options.runtimeConfig.dayjs, options)
 
-    addPlugin(resolver.resolve('runtime/plugin.client'))
+    addPlugin(resolver.resolve('./runtime/plugin'))
     addImports({
       name: 'useDayjs',
       as: 'useDayjs',
-      from: resolver.resolve('runtime/composables/dayjs')
+      from: resolver.resolve('./runtime/composables/dayjs')
     })
   }
 })
