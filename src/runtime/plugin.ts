@@ -12,6 +12,12 @@ export default defineNuxtPlugin(async (nuxtApp) => {
  nuxtApp.provide('dayjs', dayjs)
 })
 
+declare module '#app' {
+  interface NuxtApp {
+    $dayjs: typeof dayjs
+  }
+}
+
 // https://api.github.com/repos/iamkun/dayjs/contents/src/locale
 const importLocale = async (locale: string) => {
   let result
