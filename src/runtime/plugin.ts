@@ -1,4 +1,4 @@
-import * as dayjs from 'dayjs'
+import dayjs from 'dayjs/esm/index.js'
 import { defineNuxtPlugin, useRuntimeConfig } from '#app'
 
 export default defineNuxtPlugin(async (nuxtApp) => {
@@ -17,6 +17,18 @@ declare module '#app' {
     $dayjs: typeof dayjs
   }
 }
+
+declare module 'vue' {
+  interface ComponentCustomProperties {
+    $dayjs: typeof dayjs
+  }
+}
+declare module '@vue/runtime-core' {
+  interface ComponentCustomProperties {
+    $dayjs: typeof dayjs
+  }
+}
+
 
 // https://api.github.com/repos/iamkun/dayjs/contents/src/locale
 const importLocale = async (locale: string) => {
