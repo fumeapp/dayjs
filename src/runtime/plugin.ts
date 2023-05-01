@@ -1,5 +1,4 @@
-import dayjs from 'dayjs/esm/index.js'
-import '#build/dayjs.imports.mjs'
+import dayjs from '#build/dayjs.imports.mjs'
 import { defineNuxtPlugin } from '#app'
 
 declare module '#app' {
