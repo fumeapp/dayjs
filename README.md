@@ -44,7 +44,38 @@ export default defineNuxtConfig({
 })
 ```
 
-That's it! You can now use Dayjs Nuxt Module in your Nuxt app ✨
+## Basic Usage
+
+You can use the provided composables to access Dayjs anywhere.
+
+```vue
+<script lang="ts" setup>
+const dayjs = useDayjs()
+const date = dayjs('2023-01-01')
+</script>
+
+<template>
+  <div>
+    <time :datetime="date.utc()"> {{ date }}</p>
+  </div>
+  </template>
+```
+
+## Configuration
+You can specify any amount of locales, plugins, set a default locale, and set a default timezone
+
+```ts
+export default defineNuxtConfig({
+  modules: ['dayjs-nuxt'],
+  dayjs: {
+    locales: ['en', 'fr'],
+    plugins: ['relativeTime', 'utc', 'timezone'],
+    defaultLocale: 'en',
+    defaultTimezone: 'America/New_York',
+  }
+})
+```
+> By default we include the relativeTime and utc plugins
 
 ## Development
 

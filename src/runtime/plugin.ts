@@ -19,8 +19,6 @@ declare module '@vue/runtime-core' {
   }
 }
 
-export default defineNuxtPlugin(async (nuxtApp) => {
-  nuxtApp.provide('dayjs', dayjs)
-})
+export default defineNuxtPlugin(async (nuxtApp) => nuxtApp.provide('dayjs', dayjs))
 
 // https://api.github.com/repos/iamkun/dayjs/contents/src/locale
