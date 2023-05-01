@@ -1,4 +1,4 @@
-[!Nuxt Dayjs module](./.github/card.png)
+![Nuxt Dayjs module](./.github/card.png)
 # Dayjs Nuxt Module
 > Fast 2kB alternative to Moment.js with the same modern API
 
