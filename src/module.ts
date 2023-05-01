@@ -1,4 +1,3 @@
-import { defu } from 'defu'
 import { defineNuxtModule, addPlugin, addImports, createResolver, addTemplate } from '@nuxt/kit'
 
 // Module options TypeScript interface definition

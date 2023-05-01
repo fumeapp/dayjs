@@ -7,9 +7,6 @@ dependencies:
   dayjs:
     specifier: ^1.11.7
     version: 1.11.7
-  defu:
-    specifier: ^6.1.2
-    version: 6.1.2
 
 devDependencies:
   '@nuxt/eslint-config':
