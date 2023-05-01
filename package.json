@@ -1,6 +1,6 @@
 {
   "name": "dayjs-nuxt",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Day.JS Module for Nuxt",
   "repository": "fumeapp.org/dayjs",
   "license": "MIT",
