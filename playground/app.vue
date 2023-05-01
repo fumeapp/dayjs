@@ -1,10 +1,12 @@
 <script lang="ts" setup>
 const dayjs = useDayjs()
+const card = true
 </script>
 
 <template>
   <div>
-    <table>
+    <module-card v-if="card" />
+    <table v-else>
       <thead>
         <tr>
           <th>Name</th>

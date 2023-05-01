@@ -1,5 +1,6 @@
+[!Nuxt Dayjs module](././github/card.png)
 # Dayjs Nuxt Module
-> early development, module now stable
+> Fast 2kB alternative to Moment.js with the same modern API
 
 [![npm version][npm-version-src]][npm-version-href]
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
