@@ -1,5 +1,6 @@
 import { defu } from 'defu'
-import { defineNuxtModule, addPlugin, addImports, createResolver } from '@nuxt/kit'
+import { defineNuxtModule, addPlugin, addImports, createResolver, addTemplate } from '@nuxt/kit'
+import { makeImports } from './imports'
 
 // Module options TypeScript interface definition
 export interface ModuleOptions {
@@ -43,5 +44,11 @@ export default defineNuxtModule<ModuleOptions>({
       as: 'useDayjs',
       from: resolver.resolve('./runtime/composables/dayjs')
     })
+    addTemplate({
+      filename: 'dayjs.imports.mjs',
+      getContents: () => makeImports(options)
+    })
+
+
   }
 })
