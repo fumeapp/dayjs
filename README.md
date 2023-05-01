@@ -1,5 +1,5 @@
-![Nuxt Dayjs module](./.github/card.png)
-# Dayjs Nuxt Module
+![Nuxt Day.js module](./.github/card.png)
+# Day.js Nuxt Module
 > Fast 2kB alternative to Moment.js with the same modern API
 
 [![npm version][npm-version-src]][npm-version-href]
@@ -7,7 +7,7 @@
 [![License][license-src]][license-href]
 [![Nuxt][nuxt-src]][nuxt-href]
 
-Dayjs Nuxt Module supporting v3
+[Day.js](https://day.js.org/) Nuxt Module supporting v3
 
 - [✨ &nbsp;Release Notes](/CHANGELOG.md)
 - [🏀 Online playground](https://stackblitz.com/github/fumeapp/dayjs-nuxt?file=playground%2Fapp.vue)
@@ -16,9 +16,9 @@ Dayjs Nuxt Module supporting v3
 ## Features
 
 <!-- Highlight some of the features your module provide here -->
-- ⛰ &nbsp;Ability to pass in locales
-- 🚠 &nbsp;Ability to activate any plugin
-- 🌲 &nbsp;Baz
+- ⛰ &nbsp;Nuxt 3 ready
+- 🚠 &nbsp;Activate any plugin or locale available
+- 🌲 &nbsp;Specify default locales and timezones
 
 ## Quick Setup
 
@@ -47,7 +47,7 @@ export default defineNuxtConfig({
 
 ## Basic Usage
 
-You can use the provided composables to access Dayjs anywhere.
+You can use the provided composables to access Day.js anywhere.
 
 ```vue
 <script lang="ts" setup>
