@@ -65,8 +65,10 @@ export default defineNuxtModule<ModuleOptions>({
 
     // Add dayjs plugin types
     nuxt.hook('prepare:types', ({ references }) => {
-      const plugins = options?.plugins.map((p) => ({ types: `dayjs/plugin/${p}` }))
-      references.push(...plugins)
+      if (options.plugins) {
+        const plugins = options.plugins.map((p) => ({ types: `dayjs/plugin/${p}` }))
+        references.push(...plugins)
+      }
     })
   }
 })
