@@ -1,6 +1,19 @@
 # Changelog
 
 
+## v1.1.0
+
+[compare changes](https://undefined/undefined/compare/v1.0.9...v1.1.0)
+
+
+### 🚀 Enhancements
+
+  - **module:** Generate types for dayjs plugins (0199d66)
+
+### ❤️  Contributors
+
+- João Pedro Antunes Silva <github@joaopedroas.com>
+
 ## v1.0.9
 
 [compare changes](https://undefined/undefined/compare/v1.0.8...v1.0.9)
