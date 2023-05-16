@@ -43,7 +43,7 @@ export default defineNuxtModule<ModuleOptions>({
     defaultLocale: undefined,
     defaultTimezone: undefined,
   },
-  setup (options) {
+  setup (options, nuxt) {
 
     const resolver = createResolver(import.meta.url)
     options.plugins = [...new Set(options.plugins)]
