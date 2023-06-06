@@ -78,6 +78,37 @@ export default defineNuxtConfig({
 ```
 > By default we include the relativeTime and utc plugins
 
+
+## Optional relativeTime customization
+You can now specify a custom relativeTime configuration, lets create one [Gollum](https://en.wiktionary.org/wiki/hobbitses) would understand
+
+```ts
+export default defineNuxtConfig({
+  modules: ['dayjs-nuxt'],
+  dayjs: {
+    ...
+    relativeTime: {
+      future: "in %s",
+      past: "%s ago",
+      s: 'a few secondses',
+      m: "a minute",
+      mm: "%d minuteses",
+      h: "an hour",
+      hh: "%d hourses",
+      d: "a day",
+      dd: "%d dayses",
+      M: "a month",
+      MM: "%d monthseses",
+      y: "a year",
+      yy: "%d yearseses"
+    }
+    ...
+  }
+})
+```
+>
+
+
 ## Development
 
 ```bash
