@@ -1,21 +1,22 @@
 import dayjs from '#build/dayjs.imports.mjs'
+import * as Dayjs from 'dayjs'
 import { defineNuxtPlugin } from '#app'
 
 declare module '#app' {
   interface NuxtApp {
-    $dayjs: typeof dayjs
+    $dayjs: typeof Dayjs
   }
 }
 
 declare module 'vue' {
   interface ComponentCustomProperties {
-    $dayjs: typeof dayjs
+    $dayjs: typeof Dayjs
   }
 }
 
 declare module '@vue/runtime-core' {
   interface ComponentCustomProperties {
-    $dayjs: typeof dayjs
+    $dayjs: typeof Dayjs
   }
 }
 

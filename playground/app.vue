@@ -1,5 +1,8 @@
 <script lang="ts" setup>
-const dayjs = useDayjs()
+import { useNuxtApp } from './.nuxt/imports'
+
+const { $dayjs: dayjs } = useNuxtApp()
+// const dayjs = useDayjs()
 const card = false
 const icon = false
 </script>

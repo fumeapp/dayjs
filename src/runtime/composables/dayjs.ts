@@ -1,5 +1,7 @@
 import { useNuxtApp } from '#app'
-export const useDayjs = () => {
+import type { Dayjs } from 'dayjs'
+
+export const useDayjs = (): Dayjs => {
   const { $dayjs: dayjs } = useNuxtApp()
-  return dayjs
+  return dayjs as Dayjs
 }
