@@ -57,7 +57,7 @@ const date = dayjs('2023-01-01')
 
 <template>
   <div>
-    <time :datetime="date.utc()"> {{ date }}</p>
+    <time :datetime="date.utc().toString()"> {{ date }} </time>
   </div>
   </template>
 ```
