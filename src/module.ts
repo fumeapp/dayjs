@@ -16,7 +16,19 @@ export interface RelativeTimeOptions {
   yy: string,
 }
 
-interface LocaleConfig {
+interface FormatOptions {
+  LT: string,
+  LTS: string,
+  L: string,
+  LL: string,
+  LLL: string,
+  LLLL: string,
+}
+
+interface DefaultLocaleOptions {
+  name?: string
+  weekdays?: string[]
+  months?: string[]
   /**
    * The starting day of a week, 1 for Monday / 7 for Sunday
    */
@@ -25,6 +37,11 @@ interface LocaleConfig {
    * Ability to configure relatvieTime with updateLocale
    * https://day.js.org/docs/en/customization/relative-time
    */
+  weekdaysShort?: string[]
+  monthsShort?: string[]
+  weekdaysMin?: string[]
+  ordinal?: (n: number) => number | string
+  formats?: FormatOptions
   relativeTime?: RelativeTimeOptions
 }
 
@@ -40,7 +57,7 @@ export interface ModuleOptions {
   /**
    * The default locale to use
    */
-  defaultLocale?: string | [string, LocaleConfig]
+  defaultLocale?: string | [string, DefaultLocaleOptions]
 
 
   /**
