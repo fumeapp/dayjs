@@ -130,7 +130,7 @@ ${locales?.map(locale =>  `dayjs.locale('${locale}')`).join('\n')}
 ${defaultTimezone ? `dayjs.tz.setDefault('${defaultTimezone}')` : ''}
 
 ${defaultLocale ? `
-dayjs.updateLocale(${JSON.stringify(defaultLocale).replace(/^\(|\)$|^\[|\]$/g, '')})` : ""}
+dayjs.updateLocale(${JSON.stringify(defaultLocale).replace(/^\[|\]$/g, '')})` : ""}
 
 export default dayjs
 `
