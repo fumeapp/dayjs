@@ -79,6 +79,21 @@ export default defineNuxtConfig({
 > By default we include the relativeTime and utc plugins
 
 
+## More extending
+
+For example, is need to add an external plugin
+
+```ts
+// plugins/dayjs.plugin.ts
+import dayjsBusinessTime from 'dayjs-business-time'
+
+export default defineNuxtPlugin(() => {
+  const dayjs = useDayjs()
+  dayjs.extend(dayjsBusinessTime)
+})
+```
+
+
 ## Optional relativeTime customization
 You can now specify a custom relativeTime configuration, lets create one [Gollum](https://en.wiktionary.org/wiki/hobbitses) would understand
 
