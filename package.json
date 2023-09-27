@@ -2,7 +2,10 @@
   "name": "dayjs-nuxt",
   "version": "1.2.1",
   "description": "Day.JS Module for Nuxt",
-  "repository": "fumeapp/dayjs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fumeapp/dayjs.git"
+  },
   "license": "MIT",
   "type": "module",
   "exports": {
@@ -16,6 +19,11 @@
   "types": "./dist/types.d.ts",
   "files": [
     "dist"
+  ],
+  "homepage": "https://github.com/fumeapp/dayjs",
+  "keywords": [
+    "nuxt",
+    "dayjs"
   ],
   "scripts": {
     "prepack": "nuxt-module-build",
