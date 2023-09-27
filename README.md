@@ -60,7 +60,7 @@ const date = dayjs('2023-01-01')
 
 <template>
   <div>
-    <time :datetime="date.utc()"> {{ date }}</p>
+    <time :datetime="date.utc().toString()"> {{ date }} </time>
   </div>
 </template>
 ```
@@ -82,6 +82,20 @@ export default defineNuxtConfig({
 ```
 
 > By default we include the relativeTime and utc plugins
+
+## More extending
+
+For example, is need to add an external plugin
+
+```ts
+// plugins/dayjs.plugin.ts
+import dayjsBusinessTime from 'dayjs-business-time'
+
+export default defineNuxtPlugin(() => {
+  const dayjs = useDayjs()
+  dayjs.extend(dayjsBusinessTime)
+})
+```
 
 ## Optional defaultLocale customization
 
@@ -115,8 +129,6 @@ export default defineNuxtConfig({
   }
 })
 ```
-
->
 
 ## Development
 
