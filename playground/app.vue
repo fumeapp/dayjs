@@ -22,8 +22,8 @@ const icon = false
       <tbody>
         <tr>
           <td>Current time</td>
-          <td> $dayjs()</td>
-          <td>{{ dayjs() }}</td>
+          <td> dayjs().format('dd, DD MMM YYYY HH:mm:ss')</td>
+          <td>{{ dayjs().format('dd, DD MMM YYYY HH:mm:ss') }}</td>
         </tr>
         <tr>
           <td>Relative Time</td>
@@ -32,8 +32,13 @@ const icon = false
         </tr>
         <tr>
           <td>UTC Time</td>
-          <td>dayjs().utc</td>
-          <td> {{ dayjs().utc() }}</td>
+          <td>dayjs().utc().format('dd, DD MMM YYYY HH:mm:ss')</td>
+          <td> {{ dayjs().utc().format('dd, DD MMM YYYY HH:mm:ss') }}</td>
+        </tr>
+        <tr>
+          <td>Week Start</td>
+          <td>dayjs().startOf('week').format('dddd')</td>
+          <td> {{ dayjs().startOf('week').format('dddd') }}</td>
         </tr>
       </tbody>
     </table>

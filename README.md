@@ -1,5 +1,7 @@
 ![Nuxt Day.js module](./.github/card.png)
+
 # Day.js Nuxt Module
+
 > Fast 2kB alternative to Moment.js with the same modern API
 
 [![npm version][npm-version-src]][npm-version-href]
@@ -16,6 +18,7 @@
 ## Features
 
 <!-- Highlight some of the features your module provide here -->
+
 - ⛰ &nbsp;Nuxt 3 ready
 - 🚠 &nbsp;Activate any plugin or locale available
 - 🌲 &nbsp;Specify default locales and timezones
@@ -59,10 +62,11 @@ const date = dayjs('2023-01-01')
   <div>
     <time :datetime="date.utc().toString()"> {{ date }} </time>
   </div>
-  </template>
+</template>
 ```
 
 ## Configuration
+
 You can specify any amount of locales, plugins, set a default locale, and set a default timezone
 
 ```ts
@@ -76,8 +80,8 @@ export default defineNuxtConfig({
   }
 })
 ```
-> By default we include the relativeTime and utc plugins
 
+> By default we include the relativeTime and utc plugins
 
 ## More extending
 
@@ -93,36 +97,38 @@ export default defineNuxtPlugin(() => {
 })
 ```
 
+## Optional defaultLocale customization
 
-## Optional relativeTime customization
-You can now specify a custom relativeTime configuration, lets create one [Gollum](https://en.wiktionary.org/wiki/hobbitses) would understand
+Instead of a locale string in `defaultLocale:`, you can define an array with a custom locale. See [dayjs customization](https://day.js.org/docs/en/customization/customization) for more information.
+
+Here is an example for a relativeTime configuration, lets create one that [Gollum](https://en.wiktionary.org/wiki/hobbitses) would understand:
 
 ```ts
 export default defineNuxtConfig({
   modules: ['dayjs-nuxt'],
   dayjs: {
     ...
-    relativeTime: {
-      future: "in %s",
-      past: "%s ago",
-      s: 'a few secondses',
-      m: "a minute",
-      mm: "%d minuteses",
-      h: "an hour",
-      hh: "%d hourses",
-      d: "a day",
-      dd: "%d dayses",
-      M: "a month",
-      MM: "%d monthseses",
-      y: "a year",
-      yy: "%d yearseses"
-    }
+    defaultLocale: ['en', {
+      relativeTime: {
+        future: "in %s",
+        past: "%s ago",
+        s: 'a few secondses',
+        m: "a minute",
+        mm: "%d minuteses",
+        h: "an hour",
+        hh: "%d hourses",
+        d: "a day",
+        dd: "%d dayses",
+        M: "a month",
+        MM: "%d monthseses",
+        y: "a year",
+        yy: "%d yearseses"
+      }
+    }]
     ...
   }
 })
 ```
->
-
 
 ## Development
 
@@ -151,14 +157,12 @@ npm run release
 ```
 
 <!-- Badges -->
+
 [npm-version-src]: https://img.shields.io/npm/v/dayjs-nuxt/latest.svg?style=flat&colorA=18181B&colorB=28CF8D
 [npm-version-href]: https://npmjs.com/package/dayjs-nuxt
-
 [npm-downloads-src]: https://img.shields.io/npm/dm/dayjs-nuxt.svg?style=flat&colorA=18181B&colorB=28CF8D
 [npm-downloads-href]: https://npmjs.com/package/dayjs-nuxt
-
 [license-src]: https://img.shields.io/npm/l/dayjs-nuxt.svg?style=flat&colorA=18181B&colorB=28CF8D
 [license-href]: https://npmjs.com/package/dayjs-nuxt
-
 [nuxt-src]: https://img.shields.io/badge/Nuxt-18181B?logo=nuxt.js
 [nuxt-href]: https://nuxt.com

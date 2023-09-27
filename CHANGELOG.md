@@ -1,6 +1,33 @@
 # Changelog
 
 
+## v1.2.0
+
+
+### 🚀 Enhancements
+
+  - **module:** Generate types for dayjs plugins (0199d66)
+
+### 🏡 Chore
+
+  - **release:** V1.0.1 (e7e2444)
+  - **release:** V1.0.2 (b3a0f5c)
+  - **release:** V1.0.3 (20cbcb6)
+  - **release:** V1.0.4 (b28127c)
+  - **release:** V1.0.5 (0946c00)
+  - **release:** V1.0.6 (7c9ab0b)
+  - **release:** V1.0.7 (f307b8d)
+  - **release:** V1.0.8 (c92ef4a)
+  - **release:** V1.0.9 (534cac1)
+  - **release:** V1.1.0 (34ec78a)
+  - **release:** V1.1.1 (637fa21)
+  - **release:** V1.1.2 (dc033c5)
+
+### ❤️  Contributors
+
+- Kevin Olson ([@acidjazz](http://github.com/acidjazz))
+- João Pedro Antunes Silva <github@joaopedroas.com>
+
 ## v1.1.2
 
 [compare changes](https://undefined/undefined/compare/v1.1.1...v1.1.2)
