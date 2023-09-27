@@ -122,7 +122,6 @@ const generateImports = ({ locales, plugins, defaultLocale, defaultTimezone }: M
 import dayjs from 'dayjs'
 ${locales?.map(locale => `import 'dayjs/locale/${locale}'`).join('\n')}
 ${plugins?.map(plugin => `import ${plugin} from 'dayjs/plugin/${plugin}'`).join('\n')}
-${defaultLocale ?  "import updateLocale from 'dayjs/plugin/updateLocale'" : ''}
 
 ${plugins?.map(plugin => `dayjs.extend(${plugin})`).join('\n')}
 ${defaultLocale ?  "dayjs.extend(updateLocale)" : ''}
