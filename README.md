@@ -107,7 +107,8 @@ Here is an example for a relativeTime configuration, lets create one that [Gollu
 export default defineNuxtConfig({
   modules: ['dayjs-nuxt'],
   dayjs: {
-    ...
+    locales: ['en', 'fr'],
+    plugins: ['relativeTime'],
     defaultLocale: ['en', {
       relativeTime: {
         future: "in %s",
