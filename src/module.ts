@@ -1,4 +1,5 @@
 import { defineNuxtModule, addPlugin, addImports, createResolver, addTemplate } from '@nuxt/kit'
+import { resolve } from 'pathe'
 
 export interface RelativeTimeOptions {
   future: string,
@@ -88,7 +89,7 @@ export default defineNuxtModule<ModuleOptions>({
     defaultLocale: undefined,
     defaultTimezone: undefined,
   },
-  setup (options, nuxt) {
+  async setup (options, nuxt) {
 
     const resolver = createResolver(import.meta.url)
     options.plugins = [...new Set(options.plugins)]
@@ -96,12 +97,12 @@ export default defineNuxtModule<ModuleOptions>({
     if (options.defaultTimezone && !options.plugins.includes('timezone'))
       throw new Error('You must include the timezone plugin in order to set a default timezone')
 
-    addPlugin(resolver.resolve('./runtime/plugin'))
-    addImports({
-      name: 'useDayjs',
-      as: 'useDayjs',
-      from: resolver.resolve('./runtime/composables/dayjs')
-    })
+    const runtimeDir = await resolver.resolve('./runtime')
+
+    nuxt.options.build.transpile.push(runtimeDir)
+
+    addPlugin(resolve(runtimeDir, 'plugin'))
+    addImports({ name: 'useDayjs', as: 'useDayjs', from: resolve(runtimeDir, 'composables') })
     addTemplate({
       filename: 'dayjs.imports.mjs',
       getContents: () => generateImports(options),

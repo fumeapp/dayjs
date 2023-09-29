@@ -1,8 +1,6 @@
 <script lang="ts" setup>
-import { useNuxtApp } from './.nuxt/imports'
-
-const { $dayjs: dayjs } = useNuxtApp()
-// const dayjs = useDayjs()
+import { useDayjs } from '../src/runtime/composables';
+const dayjs = useDayjs()
 const card = false
 const icon = false
 </script>
@@ -66,4 +64,21 @@ table td {
   width: 400px;
   text-align: right;
 }
+
+:root {
+  --color: #243746;
+  --color-primary: #158876;
+  --color-secondary: #0e2233;
+  --bg: #f3f5f4;
+  --bg-secondary: #fff;
+  --border-color: #ddd;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: var(--bg);
+  color: var(--color);
+  transition: background-color .3s;
+}
 </style>
+
