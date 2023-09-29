@@ -26,7 +26,7 @@
     "dayjs"
   ],
   "scripts": {
-    "prepack": "nuxt-module-build",
+    "prepack": "nuxt-module-build build",
     "dev": "nuxi dev playground",
     "dev:build": "nuxi build playground",
     "dev:prepare": "nuxt-module-build --stub && nuxi prepare playground",
@@ -37,7 +37,8 @@
   },
   "dependencies": {
     "@nuxt/kit": "^3.7.4",
-    "dayjs": "^1.11.10"
+    "dayjs": "^1.11.10",
+    "pathe": "^1.1.1"
   },
   "devDependencies": {
     "@nuxt/eslint-config": "^0.2.0",
