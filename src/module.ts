@@ -102,7 +102,13 @@ export default defineNuxtModule<ModuleOptions>({
     nuxt.options.build.transpile.push(runtimeDir)
 
     addPlugin(resolve(runtimeDir, 'plugin'))
-    addImports({ name: 'useDayjs', as: 'useDayjs', from: resolve(runtimeDir, 'composables') })
+
+    addImports({
+      name: 'useDayjs',
+      as: 'useDayjs',
+      from: resolve(runtimeDir, 'composables')
+    })
+
     addTemplate({
       filename: 'dayjs.imports.mjs',
       getContents: () => generateImports(options),
