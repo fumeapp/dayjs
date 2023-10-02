@@ -84,7 +84,7 @@ export default defineNuxtModule<ModuleOptions>({
   // Default configuration options of the Nuxt module
   defaults: {
     locales: [],
-    plugins: ['updateLocale', 'utc'],
+    plugins: ['relativeTime', 'utc'],
     defaultLocale: undefined,
     defaultTimezone: undefined,
   },
