@@ -37,8 +37,7 @@
   },
   "dependencies": {
     "@nuxt/kit": "^3.7.4",
-    "dayjs": "^1.11.10",
-    "pathe": "^1.1.1"
+    "dayjs": "^1.11.10"
   },
   "devDependencies": {
     "@nuxt/eslint-config": "^0.2.0",

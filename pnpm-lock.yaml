@@ -11,9 +11,6 @@ dependencies:
   dayjs:
     specifier: ^1.11.10
     version: 1.11.10
-  pathe:
-    specifier: ^1.1.1
-    version: 1.1.1
 
 devDependencies:
   '@nuxt/devtools':
