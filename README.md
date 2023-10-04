@@ -69,7 +69,7 @@ export default defineNuxtConfig({
   modules: ['dayjs-nuxt'],
   dayjs: {
     locales: ['en', 'fr'],
-    plugins: ['relativeTime', 'utc', 'timezone'],
+    plugins: ['relativeTime', 'utc', 'timezone', 'updateLocale'],
     defaultLocale: 'en',
     defaultTimezone: 'America/New_York',
   }
@@ -102,7 +102,7 @@ export default defineNuxtConfig({
   modules: ['dayjs-nuxt'],
   dayjs: {
     locales: ['en', 'fr'],
-    plugins: ['relativeTime'],
+    plugins: ['relativeTime', 'updateLocale'],
     defaultLocale: ['en', {
       relativeTime: {
         future: "in %s",
