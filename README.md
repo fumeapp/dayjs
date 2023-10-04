@@ -53,14 +53,9 @@ export default defineNuxtConfig({
 You can use the provided composables to access Day.js anywhere.
 
 ```vue
-<script lang="ts" setup>
-const dayjs = useDayjs()
-const date = dayjs('2023-01-01')
-</script>
-
 <template>
   <div>
-    <time :datetime="date.utc().toString()"> {{ date }} </time>
+    <time :datetime="useDayjs('2023-01-01').utc().toString()"> {{ date }} </time>
   </div>
 </template>
 ```
@@ -92,8 +87,7 @@ For example, is need to add an external plugin
 import dayjsBusinessTime from 'dayjs-business-time'
 
 export default defineNuxtPlugin(() => {
-  const dayjs = useDayjs()
-  dayjs.extend(dayjsBusinessTime)
+  useDayjs().extend(dayjsBusinessTime)
 })
 ```
 
