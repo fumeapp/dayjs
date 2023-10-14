@@ -1,7 +1,7 @@
 import { useNuxtApp } from '#app'
-import dayjs, { Dayjs } from 'dayjs'
+import { Dayjs } from 'dayjs'
 
-export const useDayjs = (date?: dayjs.ConfigType): Dayjs => {
+export const useDayjs = (): (...args: any[]) => Dayjs => {
   const { $dayjs } = useNuxtApp()
-  return $dayjs(date)
+  return $dayjs
 }

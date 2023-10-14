@@ -55,7 +55,7 @@ You can use the provided composables to access Day.js anywhere.
 ```vue
 <template>
   <div>
-    <time :datetime="useDayjs('2023-01-01').utc().toString()"> {{ date }} </time>
+    <time :datetime="useDayjs()('2023-01-01').utc().toString()"> {{ date }} </time>
   </div>
 </template>
 ```
@@ -83,11 +83,13 @@ export default defineNuxtConfig({
 For example, is need to add an external plugin
 
 ```ts
-// plugins/dayjs.plugin.ts
-import dayjsBusinessTime from 'dayjs-business-time'
-
-export default defineNuxtPlugin(() => {
-  useDayjs().extend(dayjsBusinessTime)
+export default defineNuxtConfig({
+  modules: ['dayjs-nuxt'],
+  dayjs: {
+    ...
+    externalPlugins: [{name: 'dayjsBusinessTime', package: 'dayjs-business-time'}]
+    ...
+  }
 })
 ```
 
@@ -101,8 +103,7 @@ Here is an example for a relativeTime configuration, lets create one that [Gollu
 export default defineNuxtConfig({
   modules: ['dayjs-nuxt'],
   dayjs: {
-    locales: ['en', 'fr'],
-    plugins: ['relativeTime'],
+    ...
     defaultLocale: ['en', {
       relativeTime: {
         future: "in %s",

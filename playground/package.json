@@ -3,6 +3,7 @@
   "name": "my-module-playground",
   "devDependencies": {
     "@unocss/nuxt": "^0.51.8",
+    "dayjs-business-time": "^1.0.4",
     "unocss": "^0.51.8"
   }
 }

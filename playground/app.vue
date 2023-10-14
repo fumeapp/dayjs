@@ -1,8 +1,11 @@
 <script lang="ts" setup>
 import { useDayjs } from '../src/runtime/composables/dayjs';
+const dayjs = useDayjs()
 const card = false
 const icon = false
-console.log(useDayjs('2022-01-01').fromNow())
+dayjs.setHolidays([
+  '2023-10-31',
+])
 </script>
 
 <template>
@@ -21,22 +24,22 @@ console.log(useDayjs('2022-01-01').fromNow())
         <tr>
           <td>Current time</td>
           <td> dayjs().format('dd, DD MMM YYYY HH:mm:ss')</td>
-          <td>{{ useDayjs().format('dd, DD MMM YYYY HH:mm:ss') }}</td>
+          <td>{{ dayjs().format('dd, DD MMM YYYY HH:mm:ss') }}</td>
         </tr>
         <tr>
           <td>Relative Time</td>
           <td> dayjs("2023-01-01").FromNow()</td>
-          <td> {{ useDayjs("2023-01-01").fromNow() }} </td>
+          <td> {{ dayjs("2023-01-01").fromNow() }} </td>
         </tr>
         <tr>
           <td>UTC Time</td>
           <td>dayjs().utc().format('dd, DD MMM YYYY HH:mm:ss')</td>
-          <td> {{ useDayjs().utc().format('dd, DD MMM YYYY HH:mm:ss') }}</td>
+          <td> {{ dayjs().utc().format('dd, DD MMM YYYY HH:mm:ss') }}</td>
         </tr>
         <tr>
           <td>Week Start</td>
           <td>dayjs().startOf('week').format('dddd')</td>
-          <td> {{ useDayjs().startOf('week').format('dddd') }}</td>
+          <td> {{ dayjs().startOf('week').format('dddd') }}</td>
         </tr>
       </tbody>
     </table>
