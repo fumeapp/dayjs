@@ -76,11 +76,9 @@ export default defineNuxtConfig({
 })
 ```
 
-> By default we include the relativeTime and utc plugins
+> By default we include the relativeTime and utc plugins, and always impport updateLocale
 
-## More extending
-
-For example, is need to add an external plugin
+## External Plugins
 
 ```ts
 export default defineNuxtConfig({
