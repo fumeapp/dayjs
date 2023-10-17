@@ -1,5 +1,4 @@
 import { defineNuxtModule, addPlugin, addImports, createResolver, addTemplate } from '@nuxt/kit'
-import dayjs = require('dayjs')
 
 export interface RelativeTimeOptions {
   future: string,
