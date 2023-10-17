@@ -144,9 +144,11 @@ ${plugins?.map(plugin => `dayjs.extend(${plugin})`).join('\n')}
 ${externalPlugins?.map(plugin => `dayjs.extend(${plugin.name})`).join('\n')}
 ${defaultTimezone ? `dayjs.tz.setDefault('${defaultTimezone}')` : ''}
 
+// defaultLocale: ${JSON.stringify(defaultLocale)}
+
 ${defaultLocale ? `
 dayjs.updateLocale(${JSON.stringify(defaultLocale).replace(/^\[|\]$/g, '')})
-dayjs.locale('${defaultLocale[0] || defaultLocale}')
+dayjs.locale('${typeof defaultLocale === 'string' ? defaultLocale : defaultLocale[0]}')
 ` : ""}
 
 export default dayjs
