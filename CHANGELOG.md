@@ -1,6 +1,10 @@
 # Changelog
 
 
+## v2.1.3
+
+[compare changes](https://github.com/fumeapp/dayjs/compare/v2.1.2...v2.1.3)
+
 ## v2.1.1
 
 [compare changes](https://github.com/fumeapp/dayjs/compare/v2.1.0...v2.1.1)
