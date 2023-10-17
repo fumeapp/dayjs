@@ -1,7 +1,7 @@
 export default defineNuxtConfig({
   modules: ['../src/module', '@unocss/nuxt'],
   dayjs: {
-    locales: ['fr', 'en'],
+    locales: ['fr', 'en', 'ko'],
     plugins: ['relativeTime', 'utc', 'timezone'],
     externalPlugins: [{name: 'dayjsBusinessTime', package: 'dayjs-business-time'}],
     defaultLocale: ['en', {

@@ -3,9 +3,6 @@ import { useDayjs } from '../src/runtime/composables/dayjs';
 const dayjs = useDayjs()
 const card = false
 const icon = false
-dayjs.setHolidays([
-  '2023-10-31',
-])
 </script>
 
 <template>
@@ -40,6 +37,11 @@ dayjs.setHolidays([
           <td>Week Start</td>
           <td>dayjs().startOf('week').format('dddd')</td>
           <td> {{ dayjs().startOf('week').format('dddd') }}</td>
+        </tr>
+        <tr>
+          <td>.locale('ko')</td>
+          <td> dayjs().format('dd, DD MMM YYYY HH:mm:ss')</td>
+          <td>{{ dayjs('2023-01-01').locale('ko'). fromNow() }}</td>
         </tr>
       </tbody>
     </table>
