@@ -4,15 +4,6 @@ const dayjs = useDayjs()
 const card = false
 const icon = false
 
-const holidays: string[] = [
-    '2021-01-01',
-    '2021-01-25',
-    '2021-06-03',
-];
-
-// access for dayjs factory
-dayjs.setHolidays(holidays);
-
 // access for dayjs instance
 console.log(dayjs(new Date).format('YYYY-MM-DD HH:mm:ss'))
 </script>
@@ -54,6 +45,11 @@ console.log(dayjs(new Date).format('YYYY-MM-DD HH:mm:ss'))
           <td>Leap year</td>
           <td> dayjs().isLeapYear()</td>
           <td>{{ $dayjs('2023-01-01').isLeapYear() }}</td>
+        </tr>
+        <tr>
+          <td>Boxing day</td>
+          <td> dayjs('2023-12-26').isHoliday()</td>
+          <td>{{ $dayjs('2023-12-26').isHoliday() }}</td>
         </tr>
         <tr>
           <td>.locale('ko')</td>

@@ -85,7 +85,14 @@ export default defineNuxtConfig({
   modules: ['dayjs-nuxt'],
   dayjs: {
     ...
-    externalPlugins: [{name: 'dayjsBusinessTime', package: 'dayjs-business-time'}]
+    externalPlugins: [{
+      name: 'dayjsBusinessDays',
+      package: 'dayjs-business-days2',
+      option: {
+        holidays: [`2023-12-26`],
+        holidayFormat: `YYYY-MM-DD`,
+      }
+    }]
     ...
   }
 })
