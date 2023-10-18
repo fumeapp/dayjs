@@ -77,7 +77,7 @@ export interface ModuleOptions {
    * @example ['timezone', 'utc']
    */
 
-  externalPlugins?: {name: string, package: string}[]
+  externalPlugins?: { name: string, package: string, option?: unknown }[]
 
 }
 
@@ -97,7 +97,7 @@ export default defineNuxtModule<ModuleOptions>({
     defaultLocale: undefined,
     defaultTimezone: undefined,
   },
-  setup (options, nuxt) {
+  setup(options, nuxt) {
 
     const resolver = createResolver(import.meta.url)
     options.plugins = [...new Set(options.plugins)]
@@ -126,6 +126,10 @@ export default defineNuxtModule<ModuleOptions>({
         const plugins = options.plugins.map((p) => ({ types: `dayjs/plugin/${p}` }))
         references.push(...plugins)
       }
+      if (options.externalPlugins) {
+        const externalPlugins = options.externalPlugins.map((p) => ({ types: p.package }))
+        references.push(...externalPlugins)
+      }
     })
   }
 })
@@ -142,7 +146,7 @@ ${externalPlugins?.map(plugin => `import ${plugin.name} from '${plugin.package}'
 dayjs.extend(updateLocale)
 
 ${plugins?.map(plugin => `dayjs.extend(${plugin})`).join('\n')}
-${externalPlugins?.map(plugin => `dayjs.extend(${plugin.name})`).join('\n')}
+${externalPlugins?.map(plugin => `dayjs.extend(${plugin.name}, ${JSON.stringify(plugin.option)})`).join('\n')}
 ${defaultTimezone ? `dayjs.tz.setDefault('${defaultTimezone}')` : ''}
 
 // defaultLocale: ${JSON.stringify(defaultLocale)}
