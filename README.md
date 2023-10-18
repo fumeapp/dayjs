@@ -55,7 +55,7 @@ You can use the provided composables to access Day.js anywhere.
 ```vue
 <template>
   <div>
-    <time :datetime="useDayjs()('2023-01-01').utc().toString()"> {{ date }} </time>
+    <time :datetime="$dayjs()('2023-01-01').utc().toString()"> {{ date }} </time>
   </div>
 </template>
 ```
