@@ -3,20 +3,19 @@ import { defineNuxtPlugin } from '#app'
 
 declare module '#app' {
   interface NuxtApp {
-    $dayjs: (...args: any[]) => dayjs.Dayjs
+    $dayjs: typeof dayjs;
   }
 }
 
 declare module 'vue' {
   interface ComponentCustomProperties {
-    $dayjs: (...args: any[]) => dayjs.Dayjs
+    $dayjs: typeof dayjs;
   }
 }
 
 declare module '@vue/runtime-core' {
   interface ComponentCustomProperties {
-    $dayjs: (...args: any[]) => dayjs.Dayjs
-
+    $dayjs: typeof dayjs;
   }
 }
 
