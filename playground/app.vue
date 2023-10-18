@@ -3,6 +3,18 @@ import { useDayjs } from '../src/runtime/composables/dayjs';
 const dayjs = useDayjs()
 const card = false
 const icon = false
+
+const holidays: string[] = [
+    '2021-01-01',
+    '2021-01-25',
+    '2021-06-03',
+];
+
+// access for dayjs factory
+dayjs.setHolidays(holidays);
+
+// access for dayjs instance
+console.log(dayjs(new Date).format('YYYY-MM-DD HH:mm:ss'))
 </script>
 
 <template>
@@ -21,27 +33,32 @@ const icon = false
         <tr>
           <td>Current time</td>
           <td> dayjs().format('dd, DD MMM YYYY HH:mm:ss')</td>
-          <td>{{ dayjs().format('dd, DD MMM YYYY HH:mm:ss') }}</td>
+          <td>{{ $dayjs().format('dd, DD MMM YYYY HH:mm:ss') }}</td>
         </tr>
         <tr>
           <td>Relative Time</td>
           <td> dayjs("2023-01-01").FromNow()</td>
-          <td> {{ dayjs("2023-01-01").fromNow() }} </td>
+          <td> {{ $dayjs("2023-01-01").fromNow() }} </td>
         </tr>
         <tr>
           <td>UTC Time</td>
           <td>dayjs().utc().format('dd, DD MMM YYYY HH:mm:ss')</td>
-          <td> {{ dayjs().utc().format('dd, DD MMM YYYY HH:mm:ss') }}</td>
+          <td> {{ $dayjs().utc().format('dd, DD MMM YYYY HH:mm:ss') }}</td>
         </tr>
         <tr>
           <td>Week Start</td>
           <td>dayjs().startOf('week').format('dddd')</td>
-          <td> {{ dayjs().startOf('week').format('dddd') }}</td>
+          <td> {{ $dayjs().startOf('week').format('dddd') }}</td>
+        </tr>
+        <tr>
+          <td>Leap year</td>
+          <td> dayjs().isLeapYear()</td>
+          <td>{{ $dayjs('2023-01-01').isLeapYear() }}</td>
         </tr>
         <tr>
           <td>.locale('ko')</td>
           <td> dayjs().format('dd, DD MMM YYYY HH:mm:ss')</td>
-          <td>{{ dayjs('2023-01-01').locale('ko'). fromNow() }}</td>
+          <td>{{ $dayjs('2023-01-01').locale('ko').fromNow() }}</td>
         </tr>
       </tbody>
     </table>
