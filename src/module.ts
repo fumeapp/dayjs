@@ -117,6 +117,7 @@ export default defineNuxtModule<ModuleOptions>({
     addTemplate({
       filename: 'dayjs.imports.mjs',
       getContents: () => generateImports(options),
+      write: true,
     })
 
     // Add dayjs plugin types
