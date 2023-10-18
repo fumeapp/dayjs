@@ -1,6 +1,21 @@
 # Changelog
 
 
+## v2.1.8
+
+[compare changes](https://github.com/fumeapp/dayjs/compare/v2.1.1...v2.1.8)
+
+### 🏡 Chore
+
+- **release:** V2.1.3 ([55845f0](https://github.com/fumeapp/dayjs/commit/55845f0))
+- **release:** V2.1.5 ([49b2d59](https://github.com/fumeapp/dayjs/commit/49b2d59))
+- **release:** V2.1.6 ([747dda3](https://github.com/fumeapp/dayjs/commit/747dda3))
+- **release:** V2.1.7 ([8b1bb4f](https://github.com/fumeapp/dayjs/commit/8b1bb4f))
+
+### ❤️ Contributors
+
+- Kevin Olson ([@acidjazz](http://github.com/acidjazz))
+
 ## v2.1.7
 
 [compare changes](https://github.com/fumeapp/dayjs/compare/v2.1.6...v2.1.7)
