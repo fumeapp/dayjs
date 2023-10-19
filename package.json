@@ -13,7 +13,8 @@
       "types": "./dist/types.d.ts",
       "import": "./dist/module.mjs",
       "require": "./dist/module.cjs"
-    }
+    },
+    "./dist/runtime/composables/dayjs": "./dist/runtime/composables/dayjs.mjs"
   },
   "main": "./dist/module.cjs",
   "types": "./dist/types.d.ts",
