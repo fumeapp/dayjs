@@ -108,10 +108,11 @@ export default defineNuxtModule<ModuleOptions>({
 
     addPlugin(resolver.resolve('./runtime/plugin'))
 
+		nuxt.options.alias["#dayjs"] = resolver.resolve("./runtime/composables/dayjs");
     addImports({
       name: 'useDayjs',
       as: 'useDayjs',
-      from: resolver.resolve('./runtime/composables/dayjs')
+      from: nuxt.options.alias["#dayjs"]
     })
 
     addTemplate({
