@@ -50,14 +50,27 @@ export default defineNuxtConfig({
 
 ## Basic Usage
 
-You can use the provided composables to access Day.js anywhere.
+You can use the provided `$dayjs` to access Day.js in template.
 
 ```vue
 <template>
   <div>
-    <time :datetime="$dayjs()('2023-01-01').utc().toString()"> {{ date }} </time>
+    <time :datetime="$dayjs('2023-01-01').utc().toString()"> {{ date }} </time>
   </div>
 </template>
+```
+
+## Composables
+
+You can use the useDayjs composable to access Day.js anywhere.
+
+```js
+<script setup>
+  import { useDayjs } from '#dayjs' // not need if you are using auto import
+  const dayjs = useDayjs()
+  dayjs.locale('fr')
+  dayjs.extend(...)
+</script>
 ```
 
 ## Configuration
@@ -76,7 +89,7 @@ export default defineNuxtConfig({
 })
 ```
 
-> By default we include the relativeTime and utc plugins, and always impport updateLocale
+> By default we include the relativeTime and utc plugins, and always import updateLocale
 
 ## External Plugins
 

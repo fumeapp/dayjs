@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { useDayjs } from '../src/runtime/composables/dayjs';
+import { useDayjs } from '#dayjs';
 const dayjs = useDayjs()
 const card = false
 const icon = false
