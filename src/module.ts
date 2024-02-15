@@ -45,6 +45,44 @@ interface DefaultLocaleOptions {
   relativeTime?: RelativeTimeOptions
 }
 
+type BuiltInPluginName =
+  | "advancedFormat"
+  | "arraySupport"
+  | "badMutable"
+  | "bigIntSupport"
+  | "buddhistEra"
+  | "calendar"
+  | "customParseFormat"
+  | "dayOfYear"
+  | "devHelper"
+  | "duration"
+  | "isBetween"
+  | "isLeapYear"
+  | "isMoment"
+  | "isSameOrAfter"
+  | "isSameOrBefore"
+  | "isToday"
+  | "isTomorrow"
+  | "isYesterday"
+  | "isoWeek"
+  | "isoWeeksInYear"
+  | "localeData"
+  | "localizedFormat"
+  | "minMax"
+  | "objectSupport"
+  | "pluralGetSet"
+  | "preParsePostFormat"
+  | "quarterOfYear"
+  | "relativeTime"
+  | "timezone"
+  | "toArray"
+  | "toObject"
+  | "updateLocale"
+  | "utc"
+  | "weekOfYear"
+  | "weekYear"
+  | "weekday"
+
 // Module options TypeScript interface definition
 export interface ModuleOptions {
   /**
@@ -70,7 +108,7 @@ export interface ModuleOptions {
    * @example ['timezone', 'utc']
    */
 
-  plugins?: string[]
+  plugins?: BuiltInPluginName[]
 
   /**
    * An array of external optional plugins to load
