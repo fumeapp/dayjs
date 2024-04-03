@@ -28,14 +28,7 @@
 1. Add `dayjs-nuxt` dependency to your project
 
 ```bash
-# Using pnpm
-pnpm add -D dayjs-nuxt
-
-# Using yarn
-yarn add --dev dayjs-nuxt
-
-# Using npm
-npm install --save-dev dayjs-nuxt
+npx nuxi@latest module add dayjs
 ```
 
 2. Add `dayjs-nuxt` to the `modules` section of `nuxt.config.ts`
