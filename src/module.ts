@@ -1,4 +1,5 @@
 import { defineNuxtModule, addPlugin, addImports, createResolver, addTemplate } from '@nuxt/kit'
+import type { BuiltInLocale, BuiltInPluginName } from './types'
 
 export interface RelativeTimeOptions {
   future: string,
@@ -52,12 +53,12 @@ export interface ModuleOptions {
    * @example ['en', 'fr']
    */
 
-  locales?: string[]
+  locales?: BuiltInLocale[]
 
   /**
    * The default locale to use
    */
-  defaultLocale?: string | [string, DefaultLocaleOptions]
+  defaultLocale?: BuiltInLocale | [BuiltInLocale, DefaultLocaleOptions]
 
 
   /**
@@ -70,7 +71,7 @@ export interface ModuleOptions {
    * @example ['timezone', 'utc']
    */
 
-  plugins?: string[]
+  plugins?: BuiltInPluginName[]
 
   /**
    * An array of external optional plugins to load
