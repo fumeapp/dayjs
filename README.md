@@ -12,7 +12,7 @@
 [Day.js](https://day.js.org/) Nuxt Module supporting v3
 
 - [✨ &nbsp;Release Notes](/CHANGELOG.md)
-- [🏀 Online playground](https://stackblitz.com/github/fumeapp/dayjs-nuxt?file=playground%2Fapp.vue)
+- [🏀 Online playground](https://stackblitz.com/github/fumeapp/dayjs?file=playground%2Fapp.vue)
 <!-- - [📖 &nbsp;Documentation](https://example.com) -->
 
 ## Features
