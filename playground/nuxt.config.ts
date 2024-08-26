@@ -1,5 +1,6 @@
 export default defineNuxtConfig({
   modules: ['../src/module', '@unocss/nuxt'],
+
   dayjs: {
     locales: ['fr', 'en', 'ko'],
     plugins: ['relativeTime', 'utc', 'timezone', 'isLeapYear'],
@@ -30,5 +31,7 @@ export default defineNuxtConfig({
       }
     }],
     defaultTimezone: 'Europe/Berlin',
-  }
+  },
+
+  compatibilityDate: '2024-08-25'
 })

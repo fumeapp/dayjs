@@ -42,14 +42,14 @@
   },
   "devDependencies": {
     "@nuxt/devtools": "^1.0.0",
-    "@nuxt/eslint-config": "^0.2.0",
+    "@nuxt/eslint-config": "^0.5.2",
     "@nuxt/module-builder": "^0.8.3",
     "@nuxt/schema": "^3.7.4",
     "@nuxt/test-utils": "^3.7.4",
-    "@types/node": "^20.8.7",
+    "@types/node": "^22.5.0",
     "changelogen": "^0.5.5",
-    "eslint": "^8.51.0",
-    "nuxt": "^3.7.4",
-    "vitest": "^0.34.6"
+    "eslint": "^9.9.1",
+    "nuxt": "^3.13.0",
+    "vitest": "^2.0.5"
   }
 }
