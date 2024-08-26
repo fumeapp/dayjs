@@ -5,7 +5,7 @@ export default defineConfig({
     colors: {
       dayjs: {
         primary: 'rgba(232, 98, 74, 1)',
-      }
-    }
+      },
+    },
   },
 })
