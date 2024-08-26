@@ -286,7 +286,6 @@ export type BuiltInLocale =
   | 'zh'
   | 'zh'
 
-
 export type BuiltInPluginName =
   | 'advancedFormat'
   | 'arraySupport'

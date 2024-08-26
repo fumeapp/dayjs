@@ -2,28 +2,28 @@ import { defineNuxtModule, addPlugin, addImports, createResolver, addTemplate } 
 import type { BuiltInLocale, BuiltInPluginName } from './types'
 
 export interface RelativeTimeOptions {
-  future: string,
-  past: string,
-  s: string,
-  m: string,
-  mm: string,
-  h: string,
-  hh: string,
-  d: string,
-  dd: string,
-  M: string,
-  MM: string,
-  y: string,
-  yy: string,
+  future: string
+  past: string
+  s: string
+  m: string
+  mm: string
+  h: string
+  hh: string
+  d: string
+  dd: string
+  M: string
+  MM: string
+  y: string
+  yy: string
 }
 
 interface FormatOptions {
-  LT: string,
-  LTS: string,
-  L: string,
-  LL: string,
-  LLL: string,
-  LLLL: string,
+  LT: string
+  LTS: string
+  L: string
+  LL: string
+  LLL: string
+  LLLL: string
 }
 
 interface DefaultLocaleOptions {
@@ -60,7 +60,6 @@ export interface ModuleOptions {
    */
   defaultLocale?: BuiltInLocale | [BuiltInLocale, DefaultLocaleOptions]
 
-
   /**
    * The default timezone to use
    */
@@ -87,8 +86,8 @@ export default defineNuxtModule<ModuleOptions>({
     name: 'dayjs',
     configKey: 'dayjs',
     compatibility: {
-      nuxt: '>=3'
-    }
+      nuxt: '>=3',
+    },
   },
   // Default configuration options of the Nuxt module
   defaults: {
@@ -99,7 +98,6 @@ export default defineNuxtModule<ModuleOptions>({
     defaultTimezone: undefined,
   },
   setup(options, nuxt) {
-
     const resolver = createResolver(import.meta.url)
     options.plugins = [...new Set(options.plugins)]
     options.externalPlugins = [...new Set(options.externalPlugins)]
@@ -109,11 +107,11 @@ export default defineNuxtModule<ModuleOptions>({
 
     addPlugin(resolver.resolve('./runtime/plugin'))
 
-		nuxt.options.alias["#dayjs"] = resolver.resolve("./runtime/composables/dayjs");
+    nuxt.options.alias['#dayjs'] = resolver.resolve('./runtime/composables/dayjs')
     addImports({
       name: 'useDayjs',
       as: 'useDayjs',
-      from: nuxt.options.alias["#dayjs"]
+      from: nuxt.options.alias['#dayjs'],
     })
 
     addTemplate({
@@ -125,15 +123,15 @@ export default defineNuxtModule<ModuleOptions>({
     // Add dayjs plugin types
     nuxt.hook('prepare:types', ({ references }) => {
       if (options.plugins) {
-        const plugins = options.plugins.map((p) => ({ types: `dayjs/plugin/${p}` }))
+        const plugins = options.plugins.map(p => ({ types: `dayjs/plugin/${p}` }))
         references.push(...plugins)
       }
       if (options.externalPlugins) {
-        const externalPlugins = options.externalPlugins.map((p) => ({ types: p.package }))
+        const externalPlugins = options.externalPlugins.map(p => ({ types: p.package }))
         references.push(...externalPlugins)
       }
     })
-  }
+  },
 })
 
 const generateImports = ({ locales, plugins, externalPlugins, defaultLocale, defaultTimezone }: ModuleOptions) => `
@@ -153,10 +151,12 @@ ${defaultTimezone ? `dayjs.tz.setDefault('${defaultTimezone}')` : ''}
 
 // defaultLocale: ${JSON.stringify(defaultLocale)}
 
-${defaultLocale ? `
+${defaultLocale
+    ? `
 dayjs.updateLocale(${JSON.stringify(defaultLocale).replace(/^\[|\]$/g, '')})
 dayjs.locale('${typeof defaultLocale === 'string' ? defaultLocale : defaultLocale[0]}')
-` : ""}
+`
+    : ''}
 
 export default dayjs
 `

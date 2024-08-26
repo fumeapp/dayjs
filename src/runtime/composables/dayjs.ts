@@ -1,5 +1,5 @@
-import dayjs from '#build/dayjs.imports.mjs';
+import dayjs from '#build/dayjs.imports.mjs'
 
 export function useDayjs() {
-	return dayjs
+  return dayjs
 }
