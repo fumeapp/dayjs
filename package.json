@@ -14,7 +14,7 @@
       "import": "./dist/module.mjs",
       "require": "./dist/module.cjs"
     },
-    "./dist/runtime/composables/dayjs": "./dist/runtime/composables/dayjs.mjs"
+    "./dist/runtime/composables/dayjs": "./dist/runtime/composables/dayjs.js"
   },
   "main": "./dist/module.cjs",
   "types": "./dist/types.d.ts",
