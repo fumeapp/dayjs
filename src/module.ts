@@ -87,7 +87,7 @@ export default defineNuxtModule<ModuleOptions>({
     name: 'dayjs',
     configKey: 'dayjs',
     compatibility: {
-      nuxt: '^3'
+      nuxt: '>=3'
     }
   },
   // Default configuration options of the Nuxt module
