@@ -1,6 +1,28 @@
 # Changelog
 
 
+## v2.1.10
+
+[compare changes](https://github.com/fumeapp/dayjs/compare/v2.1.10...v2.1.10)
+
+### 🩹 Fixes
+
+- Augment `vue` rather than `@vue/runtime-core` ([f251f0f](https://github.com/fumeapp/dayjs/commit/f251f0f))
+- Update to latest `@nuxt/module-builder` ([289605c](https://github.com/fumeapp/dayjs/commit/289605c))
+
+### 📖 Documentation
+
+- Use new `nuxi module add` command in installation ([d0ec287](https://github.com/fumeapp/dayjs/commit/d0ec287))
+
+### 🏡 Chore
+
+- Test bundler module resolution ([1f07959](https://github.com/fumeapp/dayjs/commit/1f07959))
+- Indicate compatibility with new v4 major ([5310d3a](https://github.com/fumeapp/dayjs/commit/5310d3a))
+
+### ❤️ Contributors
+
+- Daniel Roe ([@danielroe](http://github.com/danielroe))
+
 ## v2.1.9
 
 [compare changes](https://github.com/fumeapp/dayjs/compare/v2.1.8...v2.1.9)
