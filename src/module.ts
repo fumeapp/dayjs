@@ -114,6 +114,12 @@ export default defineNuxtModule<ModuleOptions>({
       from: nuxt.options.alias['#dayjs'],
     })
 
+    addImports({
+      name: 'dayjs',
+      as: 'dayjs',
+      from: nuxt.options.alias['#dayjs'],
+    })
+
     addTemplate({
       filename: 'dayjs.imports.mjs',
       getContents: () => generateImports(options),
