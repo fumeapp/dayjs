@@ -55,14 +55,18 @@ You can use the provided `$dayjs` to access Day.js in template.
 
 ## Composables
 
-You can use the useDayjs composable to access Day.js anywhere.
+You can use the `useDayjs()` and `dayjs()` composables to access Day.js anywhere.
 
-```js
+```vue
 <script setup>
-  import { useDayjs } from '#dayjs' // not need if you are using auto import
-  const dayjs = useDayjs()
-  dayjs.locale('fr')
-  dayjs.extend(...)
+  import { useDayjs, dayjs } from '#dayjs' // not need if you are using auto import
+
+  // access for dayjs globals
+  useDayjs().locale('fr')
+  useDayjs().extend(...)
+
+  // access for dayjs instance
+  console.log(dayjs().format('YYYY-MM-DD HH:mm:ss'))
 </script>
 ```
 
