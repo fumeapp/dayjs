@@ -6,7 +6,8 @@ const card = false
 const icon = false
 
 // access for dayjs instance
-console.log(dayjs(new Date()).format('YYYY-MM-DD HH:mm:ss'))
+console.log('current time', dayjs(new Date()).format('YYYY-MM-DD HH:mm:ss'))
+console.log('utc time:', dayjs(new Date()).utc().format('YYYY-MM-DD HH:mm:ss'))
 </script>
 
 <template>
