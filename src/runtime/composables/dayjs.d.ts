@@ -1,3 +1,4 @@
-import type dayjs from '#build/dayjs.imports.mjs'
+import type dayjsImport from '#build/dayjs.imports.mjs';
 
-export declare function useDayjs(): typeof dayjs
+export declare function dayjs(): typeof dayjsImport.Dayjs
+export declare function useDayjs(): typeof dayjsImport
