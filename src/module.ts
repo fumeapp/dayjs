@@ -24,6 +24,10 @@ interface FormatOptions {
   LL: string
   LLL: string
   LLLL: string
+  l?: string
+  ll?: string
+  lll?: string
+  llll?: string
 }
 
 interface DefaultLocaleOptions {
@@ -111,6 +115,12 @@ export default defineNuxtModule<ModuleOptions>({
     addImports({
       name: 'useDayjs',
       as: 'useDayjs',
+      from: nuxt.options.alias['#dayjs'],
+    })
+
+    addImports({
+      name: 'dayjs',
+      as: 'dayjs',
       from: nuxt.options.alias['#dayjs'],
     })
 

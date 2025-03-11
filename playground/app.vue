@@ -1,13 +1,16 @@
 <script lang="ts" setup>
-import { useDayjs } from '#dayjs'
+import { dayjs, useDayjs } from '#dayjs'
 
-const dayjs = useDayjs()
 const card = false
 const icon = false
 
 // access for dayjs instance
 console.log('current time', dayjs(new Date()).format('YYYY-MM-DD HH:mm:ss'))
 console.log('utc time:', dayjs(new Date()).utc().format('YYYY-MM-DD HH:mm:ss'))
+console.log(dayjs().format('YYYY-MM-DD HH:mm:ss'))
+
+// access for dayjs globals
+console.log(useDayjs().isDayjs(new Date()))
 </script>
 
 <template>
