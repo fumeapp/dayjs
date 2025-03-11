@@ -24,6 +24,10 @@ interface FormatOptions {
   LL: string
   LLL: string
   LLLL: string
+  l?: string
+  ll?: string
+  lll?: string
+  llll?: string
 }
 
 interface DefaultLocaleOptions {
