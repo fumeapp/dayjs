@@ -5,6 +5,8 @@ const card = false
 const icon = false
 
 // access for dayjs instance
+console.log('current time', dayjs(new Date()).format('YYYY-MM-DD HH:mm:ss'))
+console.log('utc time:', dayjs(new Date()).utc().format('YYYY-MM-DD HH:mm:ss'))
 console.log(dayjs().format('YYYY-MM-DD HH:mm:ss'))
 
 // access for dayjs globals
